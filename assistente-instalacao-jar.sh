@@ -85,11 +85,7 @@ EOF
 
         echo "Criando e iniciando o container..."
 
-        sudo docker run --rm --name low-latency-client \
-            --network host \
-            --cap-add NET_RAW \
-            --cap-add NET_ADMIN \
-            low-latency-client
+        sudo docker run --rm --name low-latency-client low-latency-client
 
         if [ $? -eq 0 ]; then
             echo "Client executado com sucesso!"
